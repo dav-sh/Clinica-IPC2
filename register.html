@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <article>
+            <section>
+                <form action="/" method="POST" id="register">
+                    <h1>Registrate</h1>
+                    
+                    <img src="img/loginWB.png" title="User" alt="Icon User"><br/>
+
+                    <input type="text" name="name" placeholder="Nombre" id="r_nombre"><br/>
+                    <input type="text" name="user" placeholder="Usuario" id="r_usuario"><br/>
+                    <input type="password" name="password" placeholder="Contrase&ntilde;a" id="r_password"><br/>
+                    <button type="button" onclick='Registrar()'>Guardar</button>
+                    <button type="reset">Limpiar</button>
+
+                    <p>Ya tienes cuenta ?</p>
+                    <p>
+                        <a href="index.html">Inicia Sesion</a>
+                    </p>
+                </form>
+            </section>
+        </article>
+    </main>
+    <script src="js/app.js"></script> 
+    
+</body>
+</html>
