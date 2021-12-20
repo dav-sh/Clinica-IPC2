@@ -28,16 +28,7 @@ let Iniciar = ()=>{
     let pw_i = document.getElementById('password').value;
     console.log('Usuario: '+ usuario_i);
     console.log('Constraseña: '+ pw_i);
-    if(pw==pw_i && usuario==usuario_i){
-        console.log('Las contraseñas SI coinciden');
-
-        //window.location.href='./data.html'
-        //window.location.href='../views/menu.html'
-    }
-
-    else{
-        console.log('El usuario o contraseña NO coincide');
-    }
+    
 }
 
 
