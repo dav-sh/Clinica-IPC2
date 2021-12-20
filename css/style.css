@@ -17,11 +17,14 @@ article {
 }
 
 #register {
-    margin: 18px 20%;
+    margin: 8px 20%;
     background-color: rgba(149, 211, 241, 0.7);
     padding: 5px 20%;
     border-radius: 3px;
 }
+
+
+
 
 form {
     margin: 90px 20%;
@@ -34,6 +37,7 @@ h1 {
     text-align: center;
     font-size: 2.1rem;
 }
+
 
 img {
     display: block;
@@ -112,17 +116,17 @@ a:focus {
 }
 
 
-#exit{
-    display: inline-block;
-    width: 5rem;
-    margin: auto;
-    font-size: 2rem;
 
-
+.nav_nav{
+    list-style-type: none;
+    margin: 0;
 }
 
-#exit:hover{
-    font-size: 2.2rem;
-    text-shadow: #FF7514;
-
+.nav_enlace{
+    background-color: rgb(23, 161, 241);
+    padding: 10px 20px;
+    float: left;
+    color: #fff;
 }
+
+

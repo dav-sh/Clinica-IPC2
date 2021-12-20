@@ -31,7 +31,8 @@ let Iniciar = ()=>{
     if(pw==pw_i && usuario==usuario_i){
         console.log('Las contraseñas SI coinciden');
 
-        window.location.href='./data.html'
+        //window.location.href='./data.html'
+        window.location.href='./menu.html'
     }
 
     else{
