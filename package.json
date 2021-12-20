@@ -1,0 +1,29 @@
+{
+  "name": "clinica-ipc2",
+  "version": "1.0.0",
+  "description": "test server para la clinica",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dav-sh/Clinica-IPC2.git"
+  },
+  "keywords": [
+    "js",
+    "css",
+    "clinica",
+    "ejemplo"
+  ],
+  "author": "yop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dav-sh/Clinica-IPC2/issues"
+  },
+  "homepage": "https://github.com/dav-sh/Clinica-IPC2#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
