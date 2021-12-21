@@ -28,7 +28,7 @@ let Iniciar = ()=>{
     let pw_i = document.getElementById('password').value;
     console.log('Usuario: '+ usuario_i);
     console.log('Constraseña: '+ pw_i);
-    
+    window.location.href='/menu'
 }
 
 

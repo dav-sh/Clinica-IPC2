@@ -31,7 +31,7 @@ app.get('/nuevo', (req, res) =>
 
 });  //conjunto de reglas
 
-app.get('/registro', (req, res) => 
+app.get('/registrate', (req, res) => 
 { 
     res.status(201).sendFile(path.join(__dirname, '../views/reg.html')); 
 
