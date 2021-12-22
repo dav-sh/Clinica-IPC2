@@ -1,5 +1,7 @@
 * {
     font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -14,6 +16,7 @@ body {
 article {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 #register {
@@ -117,16 +120,41 @@ a:focus {
 
 
 
-.nav_nav{
+
+
+
+  
+
+
+
+
+.nav_bar ul{
     list-style-type: none;
+    background-color: rgb(23, 161, 241);
     margin: 0;
+    padding: 0;
 }
 
-.nav_enlace{
-    background-color: rgb(23, 161, 241);
-    padding: 10px 20px;
-    float: left;
-    color: #fff;
+
+.nav_bar ul li{
+    display: inline-block;
 }
+
+
+.nav_bar ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+
+}
+
+.nav_bar ul li a:hover{
+    color: rgba(11, 11, 190, 0.562);
+}
+
+.nav_exit{
+    float: right;
+}
+
 
 
