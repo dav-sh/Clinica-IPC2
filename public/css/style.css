@@ -150,11 +150,78 @@ a:focus {
 
 .nav_bar ul li a:hover{
     color: rgba(11, 11, 190, 0.562);
-}
-
-.nav_exit{
-    float: right;
+    background-color: aqua;
 }
 
 
 
+
+
+
+
+
+
+.item_titles ul{
+    list-style-type: none;
+    margin-top: 50px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color:rgba(61, 127, 180, 0.863);
+    width: 100%;
+
+} 
+
+
+.item_titles ul li{
+    display: block;
+    float: left;
+    padding: 20px 40px;
+    color:#fff;
+}
+
+
+
+
+
+
+.item_selection ul{
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid #666;
+
+}
+
+
+.item_selection ul li{
+    display: block;
+    float: left;
+    padding: 0px;
+    color:rgb(2, 2, 2);
+    width: 70px;
+}
+
+
+.item_selection ul li input[type="number"]{
+    width: 70px;
+    height: 1px;
+}
+
+.item_selection ul li input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+}
+
+.item_selection ul li textarea{
+    width: 120px;
+    height: 50px;
+}
+
+.page_title{
+    margin-top: 20px;
+    display: block;
+}

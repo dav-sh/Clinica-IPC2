@@ -39,6 +39,13 @@ app.get('/registrate', (req, res) =>
 });  //conjunto de reglas
 
 
+app.get('/analisis', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/analisis.html')); 
+
+});  //conjunto de reglas
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 
