@@ -1,5 +1,7 @@
 console.log('Iniciando app.js');
 
+
+
 var nombre= "anonimo";
 var usuario = "admin";
 var pw = "root";
@@ -52,4 +54,11 @@ function init() {
     console.log('Iniciando registro');
     console.log('Usuario: '+ document.getElementById('usuario').value + 'ee');
     
+}
+
+var title = "hola";
+
+function analisis() {
+    var content = document.getElementById('analisis-content');
+
 }
