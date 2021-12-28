@@ -13,8 +13,8 @@ app.use('/png', express.static(path.join(__dirname + '/public/img')))
 
 /** MySQL */
 //variables de entorno
-const mysqlhost = process.env.MYSQLHOST || 'localhost';  
-const mysqluser = process.env.MYSQLUSER || "admin2"
+const mysqlhost = process.env.MYSQLHOST || '192.168.1.51';  
+const mysqluser = process.env.MYSQLUSER || "super"
 const mysqlpass = process.env.MYSQLPASS || "root"
 
 //paquete MySQL
