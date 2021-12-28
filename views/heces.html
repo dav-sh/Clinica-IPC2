@@ -10,11 +10,8 @@
 <body>
     <div class="nav_bar">
         <ul class="nav_nav">
-            <li><a href="/menu"  >Home</a></li>    
-            <li><a href="/nuevo" >Registrar</a></li>    
+            <li><a href="/menu"  >Home</a></li>      
             <li><a href="/analisis" >Analisis</a></li>    
-            <li><a href="#" >Reportes</a></li>    
-            <li><a href="#" >Estadisticas</a></li>    
             <li><a href="/" class="nav_exit">Salir</a></li>    
         </ul>
     </div>
@@ -28,9 +25,6 @@
             <li><a href="/orina" >Orina</a></li>     
         </ul>
     </div>
-
-
-
 
 
     <div class="item_titles">
@@ -49,13 +43,10 @@
 
     <div class="item_selection">
         <ul >
-            <li>Globulos Rojos </li> 
-            <li><input type="number"> </li>    
+            <li>Color </li> 
+            <li><input type="text"> </li>    
             <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                </select> 
+               
             </li>    
 
             <li><input type="number" > </li>    
@@ -69,13 +60,10 @@
     
     <div class="item_selection">
         <ul >
-            <li>Hemoglobina </li>    
-            <li><input type="number"> </li>    
+            <li>Consistencia </li>    
+            <li><input type="text"> </li>    
             <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
+                
             </li>    
 
             <li><input type="number" > </li>    
@@ -90,14 +78,15 @@
 
     <div class="item_selection">
         <ul >
-            <li>Hematocrito </li>    
-            <li><input type="number"> </li>    
-            <li>
+            <li>Restos Alimenticios </li>   
+               <li>
                 <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
+                <option value="t1">Negativo</option>
+                <option value="t2">Positivo</option>                   
                  </select> 
-            </li>    
+            </li>   
+            <li><input type="text"> </li>    
+           
 
             <li><input type="number" > </li>    
             <li><input type="number" > </li>    
@@ -112,13 +101,10 @@
 
     <div class="item_selection">
         <ul >
-            <li>Recuento Globulos Blancos </li>    
+            <li>Reaccion pH </li>    
             <li><input type="number"> </li>    
             <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
+
             </li>    
 
             <li><input type="number" > </li>    
@@ -133,13 +119,10 @@
 
     <div class="item_selection">
         <ul >
-            <li>Formula Diferencial </li>    
-            <li><input type="number"> </li>    
+            <li>Examen microscopico </li>    
+            <li><input type=""> </li>    
             <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
+
             </li>    
 
             <li><input type="number"> </li>    
@@ -154,14 +137,15 @@
 
     <div class="item_selection">
         <ul >
-            <li>Eosinofilos </li>    
-            <li><input type="number"> </li>    
+            <li>Leucocitos</li>    
             <li>
                 <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
-            </li>    
+                <option value="t1">Positivo</option>
+                <option value="t2">Negativo</option>                   
+                </select> 
+            </li> 
+
+        <li><input type="text"> </li>   
 
             <li><input type="number"> </li>    
             <li><input type="number"> </li>    
@@ -174,13 +158,33 @@
 
     <div class="item_selection">
         <ul >
-            <li>Neutrofilos </li>    
-            <li><input type="number"> </li>    
+            <li>Eritrocitos</li>    
             <li>
                 <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
+                <option value="t1">Positivo</option>
+                <option value="t2">Negativo</option>                   
+                </select> 
+            </li> 
+
+        <li><input type="text"> </li>   
+
+            <li><input type="number"> </li>    
+            <li><input type="number"> </li>    
+            <li><input type="checkbox" >  </li> 
+            <li><input type="checkbox" > </li> 
+            <li><textarea rows="4" cols="10"> </textarea></li> 
+
+        </ul>
+    </div>
+
+
+   
+    <div class="item_selection">
+        <ul >
+            <li>Jabones </li>    
+            <li><input type="text"> </li>    
+            <li>
+                
             </li>    
 
             <li><input type="number"> </li>    
@@ -196,56 +200,15 @@
 
     <div class="item_selection">
         <ul >
-            <li>Linfocitos </li>    
-            <li><input type="number"> </li>    
-            <li>
+            <li>Grasas </li>    
+             <li>
                 <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
+                <option value="t1">Negativo</option>
+                <option value="t2">Positivo</option>                   
                  </select> 
-            </li>    
-
+            </li>  
             <li><input type="number"> </li>    
-            <li><input type="number"> </li>    
-            <li><input type="checkbox" >  </li> 
-            <li><input type="checkbox" > </li> 
-            <li><textarea rows="4" cols="10"> </textarea></li> 
-
-        </ul>
-    </div>
-
-
-    <div class="item_selection">
-        <ul >
-            <li>Monocitos </li>    
-            <li><input type="number"> </li>    
-            <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
-            </li>    
-
-            <li><input type="number"> </li>    
-            <li><input type="number"> </li>    
-            <li><input type="checkbox" >  </li> 
-            <li><input type="checkbox" > </li> 
-            <li><textarea rows="4" cols="10"> </textarea></li> 
-
-        </ul>
-    </div>
-
-
-    <div class="item_selection">
-        <ul >
-            <li>Recuento de Plaquetas </li>    
-            <li><input type="number"> </li>    
-            <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
-            </li>    
+  
 
             <li><input type="number"> </li>    
             <li><input type="number"> </li>    
@@ -259,13 +222,10 @@
 
     <div class="item_selection">
         <ul >
-            <li>Velocidad de Sedimentacion </li>    
-            <li><input type="number"> </li>    
+            <li>Levaduras </li>    
+            <li><input type="text"> </li>    
             <li>
-                <select class="select_units" >
-                <option value="t1">millones/L</option>
-                <option value="t2">gl/dL</option>                   
-                 </select> 
+
             </li>    
 
             <li><input type="number"> </li>    
@@ -278,7 +238,107 @@
     </div>
 
 
+    <div class="item_selection">
+        <ul >
+            <li>Paracitos </li>    
+            <li><input type="text"> </li>    
+            <li>
 
+            </li>    
+
+            <li><input type="number"> </li>    
+            <li><input type="number"> </li>    
+            <li><input type="checkbox" >  </li> 
+            <li><input type="checkbox" > </li> 
+            <li><textarea rows="4" cols="10"> </textarea></li> 
+
+        </ul>
+    </div>
+
+
+    <div class="item_selection">
+        <ul >
+            <li>Quistes </li>    
+                        <li>
+                <select class="select_units" >
+                <option value="t1">Positivo</option>
+                <option value="t2">Negativo</option>                   
+                 </select> 
+            </li>  
+            <li><input type="text"> </li>    
+  
+
+            <li><input type="number"> </li>    
+            <li><input type="number"> </li>    
+            <li><input type="checkbox" >  </li> 
+            <li><input type="checkbox" > </li> 
+            <li><textarea rows="4" cols="10"> </textarea></li> 
+
+        </ul>
+    </div>
+
+    <div class="item_selection">
+        <ul >
+            <li>Trofozoitos</li>    
+                        <li>
+                <select class="select_units" >
+                <option value="t1">Positivo</option>
+                <option value="t2">Negativo</option>                   
+                 </select> 
+            </li>  
+            <li><input type="text"> </li>    
+  
+
+            <li><input type="number"> </li>    
+            <li><input type="number"> </li>    
+            <li><input type="checkbox" >  </li> 
+            <li><input type="checkbox" > </li> 
+            <li><textarea rows="4" cols="10"> </textarea></li> 
+
+        </ul>
+    </div>
+
+    <div class="item_selection">
+        <ul >
+            <li>Huevos </li>    
+                        <li>
+                <select class="select_units" >
+                <option value="t1">Positivo</option>
+                <option value="t2">Negativo</option>                   
+                 </select> 
+            </li>  
+            <li><input type="text"> </li>    
+  
+
+            <li><input type="number"> </li>    
+            <li><input type="number"> </li>    
+            <li><input type="checkbox" >  </li> 
+            <li><input type="checkbox" > </li> 
+            <li><textarea rows="4" cols="10"> </textarea></li> 
+
+        </ul>
+    </div>
+
+    <div class="item_selection">
+        <ul >
+            <li>Larvas </li>    
+                        <li>
+                <select class="select_units" >
+                <option value="t1">Positivo</option>
+                <option value="t2">Negativo</option>                   
+                 </select> 
+            </li>  
+            <li><input type="text"> </li>    
+  
+
+            <li><input type="number"> </li>    
+            <li><input type="number"> </li>    
+            <li><input type="checkbox" >  </li> 
+            <li><input type="checkbox" > </li> 
+            <li><textarea rows="4" cols="10"> </textarea></li> 
+
+        </ul>
+    </div>
     <div class="item_selection">
         <ul >
             <li>Observaciones </li>    

@@ -9,7 +9,6 @@ dotenv.config();
 //Aqui vienen los endpoints, algunos necesitaran autorizacion y otros no
 
 app.use(express.static('public'));
-
 app.use('/css', express.static(path.join(__dirname + '/public/css')));
 app.use('/js', express.static(path.join(__dirname + '/public/js')));
 app.use('/png', express.static(path.join(__dirname + '/public/img')))
@@ -17,15 +16,21 @@ app.use('/png', express.static(path.join(__dirname + '/public/img')))
 /** MySQL */
 //variables de entorno
 const mysqlhost = process.env.HOST || '192.168.1.11';  //Aqui va mi ip
-const mysqluser = process.env.USER || "super"
-const mysqlpass = process.env.PASS || "root"
+const mysqluser = process.env.USER || "super";
+const mysqlpass = process.env.PASS || "root";
+const mysqldatabase = process.env.DATABASE || 'proyectoclinica';
 
 
+//importamos la conexion  a la bdd
+const database = require('./database');
+
+/*
 //conexion con la BDD
 const con = mysql.createConnection({
     host: mysqlhost,
     user: mysqluser,
-    password: mysqlpass
+    password: mysqlpass,
+    database: mysqldatabase
 
 
 });
@@ -38,48 +43,39 @@ con.connect(function (err){
     console.log("conectado a la BDD");
 });
 
+*/
+
+
 
 //no c muy bien para que sirve jajaa
-app.get('/',async(req, res) => {
+
+
+app.get('/bd',async(req, res) => {
     console.log(" entrando a index de view");
-    await setTimeout(() => {
-        console.log("entrando 2 no c si es para sql xd");
-        const con2 = mysql.createConnection({
-            host: mysqlhost,
-            user: mysqluser,
-            password: mysqlpass
+    var user = "conejo";
+    await database.getUser(user).then((val) => {
+        console.log(val)
+    }).catch((err)=>{
+        console.log(err)
+    })
 
-        });
-
-        //prueba
-        con2.connect(function (err){
-            if(err){
-                console.log("error al conectarse");
-                return res.status(503).json({status: "error, no conectado"});
-            }  
-            else{
-                
-                    console.log("conectado");
-                    return res.status(503).json({status: "conexion establecida"});
-                }
-            
-        });
-
-
-        //hacemos una consulta a una BDD
-        con2.query('SELECT * FROM inventario.usuario', function(err, results, fields) {
-            if(err)throw err;
-
-            results.forEach(result => {
-                console.log(result);  //imprimimos el resultado
-            });
-
-
-        });
-
-
-    },2500);
 });
+
+
+
+
+
+/*
+export function devuelveQuery(string){
+    var resultado = null;
+    con.query(string,function(err, results, fields){
+        if(err)throw err;
+        resultado = results;
+    });
+    return resultado; 
+}
+
+*/
 
 
 
@@ -89,6 +85,13 @@ app.get('/', (req, res) =>
     
 });  //conjunto de reglas
 
+
+//administrador
+app.get('/login_adm', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/login_adm.html')); 
+
+});
 
 app.get('/menu', (req, res) => 
 { 
@@ -115,6 +118,84 @@ app.get('/analisis', (req, res) =>
     res.status(201).sendFile(path.join(__dirname, '../views/analisis.html')); 
 
 });  //conjunto de reglas
+
+
+
+
+//secretaria
+
+app.get('/menu_sec', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/menu_sec.html')); 
+    
+});  
+
+
+app.get('/login_sec', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/login_sec.html')); 
+    
+});  
+
+app.get('/reg_nw_sec', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/reg_nw_sec.html')); 
+    
+});  
+
+
+
+
+
+
+
+
+
+//laboratorista
+
+app.get('/heces', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/heces.html')); 
+    
+});  //conjunto de reglas
+
+
+app.get('/orina', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/orina.html')); 
+    
+});  //conjunto de reglas
+
+
+
+app.get('/hematologia', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/hematologia.html')); 
+    
+});  //conjunto de reglas
+
+
+app.get('/menu_lab', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/menu_lab.html')); 
+    
+});  //conjunto de reglas
+
+
+app.get('/login_lab', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/login_lab.html')); 
+    
+});  //conjunto de reglas
+
+
+app.get('/analisis_lab', (req, res) => 
+{ 
+    res.status(201).sendFile(path.join(__dirname, '../views/analisis_lab.html')); 
+    
+});  //conjunto de reglas
+
+
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -44,7 +44,7 @@ h1 {
 
 img {
     display: block;
-    width: 5rem;
+    width: 10rem;
     margin: auto;
 
 
@@ -226,3 +226,56 @@ a:focus {
     display: block;
 }
 
+
+.nav_exam ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_exam ul li{
+    display: block;
+    margin-top:40px;
+    padding: 20px 20px;
+
+}
+
+.nav_exam ul li a{
+    color: black;
+}
+
+.nav_exam ul li a:hover{
+    color: #0e445e;
+}
+
+.nav_exam ul li:hover{
+    display: block;
+    margin-top:40px;
+    background-color: #00ffff;
+
+}
+
+.img_login{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.img_login ul {
+    list-style-type: none;
+
+}
+
+.img_login ul li {
+    margin: 10px 10px;
+}
+
+
+.img_login ul li a{
+    color: #000000;
+    font-size: 30px;
+}
+
+.img_login ul li:hover{
+    background-color: #d6fcfa;
+
+}

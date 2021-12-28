@@ -25,13 +25,17 @@ let Registrar = ()=>{
 
 
 let Iniciar = ()=>{
+
     console.log('Iniciando registro');
     let usuario_i = document.getElementById('usuario').value;
     let pw_i = document.getElementById('password').value;
     console.log('Usuario: '+ usuario_i);
     console.log('Constraseña: '+ pw_i);
-    window.location.href='/menu'
-}
+    //var resultados = devuelveQuery('SELECT * FROM admnistrador');
+    window.location.href='/menu';
+    alert('Ingreso correctamente');
+
+};
 
 
 let RegNuevo = ()=>{
@@ -56,9 +60,79 @@ function init() {
     
 }
 
-var title = "hola";
+
 
 function analisis() {
     var content = document.getElementById('analisis-content');
 
 }
+
+
+//admin
+let inicio_adm = async () => {
+    console.log("verificando datos");
+
+    var data = { datos: 'datos' };
+
+    const response = await fetch('/api/saludo')
+        .then(response => response.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+
+    
+    console.log('Iniciando registro');
+    let usuario_i = document.getElementById('usuario').value;
+    let pw_i = document.getElementById('password').value;
+    console.log('Usuario: '+ usuario_i);
+    console.log('Constraseña: '+ pw_i);
+    //var resultados = devuelveQuery('SELECT * FROM admnistrador');
+    window.location.href='/menu';
+    alert('Ingreso correctamente');
+    
+
+};
+
+//secre
+let inicio_sec = async () => {
+    console.log("verificando datos");
+
+    var data = { datos: 'datos' };
+
+    const response = await fetch('/api/saludo')
+        .then(response => response.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+
+        console.log('Iniciando registro');
+        let usuario_i = document.getElementById('usuario').value;
+        let pw_i = document.getElementById('password').value;
+        console.log('Usuario: '+ usuario_i);
+        console.log('Constraseña: '+ pw_i);
+        //var resultados = devuelveQuery('SELECT * FROM admnistrador');
+        window.location.href='/menu_sec';
+        alert('Ingreso correctamente');
+
+};
+
+
+//lab
+let inicio_lab = async () => {
+    console.log("verificando datos");
+
+    var data = { datos: 'datos' };
+
+    const response = await fetch('/api/saludo')
+        .then(response => response.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
+
+        console.log('Iniciando registro');
+        let usuario_i = document.getElementById('usuario').value;
+        let pw_i = document.getElementById('password').value;
+        console.log('Usuario: '+ usuario_i);
+        console.log('Constraseña: '+ pw_i);
+        //var resultados = devuelveQuery('SELECT * FROM admnistrador');
+        window.location.href='/menu_lab';
+        alert('Ingreso correctamente');
+
+};
