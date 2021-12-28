@@ -2,7 +2,10 @@ const express = require('express')  //Aqui requerimos la libreria exprexx
 const app = express()
 const port = process.env.PORT || 5000   //variable de entorno, el proveedor nos va a decir que puerto
 const path = require('path');
-
+//paquete MySQL
+const mysql = require('mysql');
+const dotenv = require('dotenv');
+dotenv.config();
 //Aqui vienen los endpoints, algunos necesitaran autorizacion y otros no
 
 app.use(express.static('public'));
@@ -13,12 +16,10 @@ app.use('/png', express.static(path.join(__dirname + '/public/img')))
 
 /** MySQL */
 //variables de entorno
-const mysqlhost = process.env.MYSQLHOST || '192.168.1.51';  
-const mysqluser = process.env.MYSQLUSER || "super"
-const mysqlpass = process.env.MYSQLPASS || "root"
+const mysqlhost = process.env.HOST || '192.168.1.11';  //Aqui va mi ip
+const mysqluser = process.env.USER || "super"
+const mysqlpass = process.env.PASS || "root"
 
-//paquete MySQL
-const mysql = require('mysql');
 
 //conexion con la BDD
 const con = mysql.createConnection({
@@ -62,6 +63,18 @@ app.get('/',async(req, res) => {
                     return res.status(503).json({status: "conexion establecida"});
                 }
             
+        });
+
+
+        //hacemos una consulta a una BDD
+        con2.query('SELECT * FROM inventario.usuario', function(err, results, fields) {
+            if(err)throw err;
+
+            results.forEach(result => {
+                console.log(result);  //imprimimos el resultado
+            });
+
+
         });
 
 
