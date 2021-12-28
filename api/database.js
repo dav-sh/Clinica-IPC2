@@ -20,16 +20,6 @@ module.exports.getUser = (userIngresado) =>{
             console.log("conectado a la BDD");
             resolve("si se pudo")
         });
-
-        
-            console.log("Consultando");
-    
-            //hacemos una consulta a una BDD
-            con.query('SELECT * FROM proyectoclinica.administrador', function(err, results, fields) {
-                if(err)throw err;
-                results.forEach(result => {
-                    console.log(result);  //imprimimos el resultado
-                });
-            });  
+       
     });
 }

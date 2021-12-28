@@ -49,19 +49,35 @@ con.connect(function (err){
 
 //no c muy bien para que sirve jajaa
 
+/*
+app.get('/login_adm',async(req, res) => {
+    //recuperamos los datos del input de entrada
+    const user = req.body.usuario;
+    const password = document.getElementById('password').value;
+    console.log(user + password);
 
-app.get('/bd',async(req, res) => {
-    console.log(" entrando a index de view");
-    var user = "conejo";
-    await database.getUser(user).then((val) => {
-        console.log(val)
-    }).catch((err)=>{
-        console.log(err)
-    })
+
+    if(user && password){
+        const consulta = 'SELECT *FROM proyectoclinica.administrador WHERE  Nombre=? AND Password=? ';
+        database.con.query(consulta, function(err, results, fields) {
+            if(err)throw err;
+            results.forEach(result => {
+                if(result.Nombre == user && result.Password == user){
+                    res.redirect('/menu');
+                }
+                console.log(result);  //imprimimos el resultado
+            });
+        });  
+    }else{
+        alert("Usuario y/o contraseña incorrectos");
+
+    }
+
+    
 
 });
 
-
+*/
 
 
 
